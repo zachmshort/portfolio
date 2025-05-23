@@ -41,13 +41,13 @@ export default async function LeetcodePostPage({ params }: Props) {
           post.languages.map((lang: string, i: number) => (
             <div key={lang} className="mt-6">
               <div className="text-xs mb-1 text-zinc-400">{lang} Solution</div>
-              <pre className="bg-gray-800 text-sm text-white rounded-xl p-4 overflow-x-auto">
-                {post.code[i]}
+              <pre className=" bg-gray-800 border border-white text-sm text-white rounded-xl p-4 overflow-x-auto mt-4">
+                {post.code}
               </pre>
             </div>
           ))
         ) : (
-          <pre className="bg-gray-800 text-sm text-white rounded-xl p-4 overflow-x-auto mt-4">
+          <pre className="bg-gray-800 text-sm border border-white text-white rounded-xl p-4 overflow-x-auto mt-4">
             {post.code}
           </pre>
         )}
