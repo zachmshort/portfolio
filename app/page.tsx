@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-[#1a1a1a] text-gray-100 min-h-screen ">
@@ -37,12 +39,21 @@ export function Hero() {
       <p className="text-lg md:text-xl max-w-2xl mb-10 text-gray-400 italic font-light">
         Tired of slow devs, sluggish sites, and overcomplicated apps? Me too.
       </p>
-      <a
-        href="#projects"
-        className="px-6 py-3 border border-gray-500 text-gray-300 font-medium rounded-full hover:bg-white hover:text-black transition"
-      >
-        Explore Projects
-      </a>
+      <div className={`gap-x-3 flex sm:flex-row flex-col gap-y-4`}>
+        <a
+          href="#projects"
+          className="px-6 py-3 border border-gray-500 w-52 text-gray-300 font-medium rounded-full hover:bg-white hover:text-black transition"
+        >
+          Explore Projects
+        </a>
+
+        <Link
+          href="/blog"
+          className="px-6 py-3 border border-gray-500 w-52 text-gray-300 font-medium rounded-full hover:bg-white hover:text-black transition"
+        >
+          Blog
+        </Link>
+      </div>
     </section>
   );
 }
@@ -51,21 +62,31 @@ const sampleProjects = [
   {
     title: "EZHomesteading",
     description:
-      "A peer-to-peer marketplace connected small organic farms & gardens with locals.",
+      "A peer-to-peer marketplace connecting small organic farms & gardens with locals.",
     tech: ["Next.js", "Expo", "MongoDB"],
-    link: "projects/ezhomesteading",
+    link: "ezhomesteading.com",
+    localLink: "projects/ezhomesteading",
   },
   {
     title: "E-Money",
     description: "A minimal real time monopoly funds & properties tracker.",
     tech: ["Go", "WebSocket", "Next.js"],
-    link: "projects/emoney",
+    link: "emoney.club",
+    localLink: "projects/emoney",
+  },
+  {
+    title: "Bocas Adventures",
+    description:
+      "A site exposing travellers to the beauty of island life in Bocas del Toro & connecting them to local attractions.",
+    tech: ["Next.js"],
+    link: "bocasadventures.com",
+    localLink: "projects/bocas-adventures",
   },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="py-28 px-6 max-w-6xl mx-auto">
+    <section id="projects" className="py-28 px-6 max-w-7xl mx-auto">
       <h3 className="text-4xl  mb-20 text-center tracking-wide">
         Featured Works
       </h3>
@@ -91,12 +112,20 @@ export function Projects() {
                 </span>
               ))}
             </div>
-            <a
-              href={project.link}
-              className="text-sm text-gray-400 hover:text-white transition"
-            >
-              View Project →
-            </a>
+            <div className={`flex flex-row justify-between`}>
+              <a
+                href={project.localLink}
+                className="text-sm text-gray-400 hover:text-white transition"
+              >
+                View Project →
+              </a>
+              <a
+                href={project.localLink}
+                className="text-sm text-gray-400 hover:text-white transition"
+              >
+                Go to Site →
+              </a>
+            </div>
           </div>
         ))}
       </div>

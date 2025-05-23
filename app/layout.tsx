@@ -4,6 +4,7 @@ import "./globals.css";
 
 const fira_code = Fira_Code({
   weight: ["300"],
+  subsets: ["latin"],
 });
 export const metadata = {
   title: "Zachary Short",
