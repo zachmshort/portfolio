@@ -44,10 +44,12 @@ export default async function LeetcodePostPage({ params }: Props) {
           <em>{post?.quote && post.quote}</em>
         </div>
         {post.code && post.languages && Array.isArray(post.code) ? (
-          post.languages.map((lang: string) => (
-            <div key={lang} className="mt-6">
-              <div className="text-xs mb-1 text-zinc-400">{lang} Solution</div>
-              <Solution code={post.code} />
+          post.code.map((code: string, index: number) => (
+            <div key={index} className="mt-6">
+              <div className="text-xs mb-1 text-zinc-400">
+                {post.languages[index]} Solution
+              </div>
+              <Solution code={code} />
             </div>
           ))
         ) : (
