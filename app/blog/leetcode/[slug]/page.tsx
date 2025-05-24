@@ -2,6 +2,7 @@ import { getLeetcodePosts } from "@/utils/get-leetcode-posts";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
+import { Solution } from "@/components/code-snippet";
 
 interface Props {
   params: Promise<{
@@ -16,8 +17,13 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const formattedSlug = slug
+    .replace("-", ". ")
+    .replaceAll("-", " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
   return {
-    title: `LeetCode Solution: ${slug}`,
+    title: `${formattedSlug}`,
   };
 }
 
@@ -38,18 +44,14 @@ export default async function LeetcodePostPage({ params }: Props) {
           <em>{post?.quote && post.quote}</em>
         </div>
         {post.code && post.languages && Array.isArray(post.code) ? (
-          post.languages.map((lang: string, i: number) => (
+          post.languages.map((lang: string) => (
             <div key={lang} className="mt-6">
               <div className="text-xs mb-1 text-zinc-400">{lang} Solution</div>
-              <pre className=" bg-gray-800 border border-white text-sm text-white rounded-xl p-4 overflow-x-auto mt-4">
-                {post.code}
-              </pre>
+              <Solution code={post.code} />
             </div>
           ))
         ) : (
-          <pre className="bg-gray-800 text-sm border border-white text-white rounded-xl p-4 overflow-x-auto mt-4">
-            {post.code}
-          </pre>
+          <Solution code={post.code} />
         )}
         <div className="prose mt-6">{post.children}</div>
       </div>

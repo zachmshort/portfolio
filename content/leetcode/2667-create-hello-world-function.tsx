@@ -14,12 +14,10 @@ const post = {
     <>
       <p>
         This is about as straight forward as it gets in my opinion. It was the
-        first leetcode problem I attempted and solved.
-      </p>
-      <p>
-        However, I did overthink it in hindsight and submitted the incorrect
-        answer roughly 5 times. Create Hello World Function is a great display
-        of simple is better.
+        one of the first leetcode problems I attempted and solved. However, I
+        did overthink it in hindsight and submitted the incorrect answer roughly
+        5 times. Create Hello World Function is a great display of simple is
+        better.
       </p>
     </>
   ),
