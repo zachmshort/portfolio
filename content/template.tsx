@@ -4,6 +4,11 @@ const post = {
   tags: [""],
   code: [``],
   languages: [""],
+  difficulty: "easy",
+  timeComplexity: "",
+  spaceComplexity: "",
+  timeBeats: "",
+  spaceBeats: "",
   children: <p></p>,
 };
 

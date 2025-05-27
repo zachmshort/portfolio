@@ -13,14 +13,7 @@ const goSolution = `func majorityElement(nums []int) int {
 const post = {
   title: "Majority Element",
   date: "2025-03-03T00:00:00Z",
-  tags: [
-    "array",
-    "hash table",
-    "sorting",
-    "counting",
-    "divide and conquer",
-    "easy",
-  ],
+  tags: ["array", "hash table", "sorting", "counting", "divide and conquer"],
   code: [goSolution],
   languages: ["Go"],
   children: <p></p>,

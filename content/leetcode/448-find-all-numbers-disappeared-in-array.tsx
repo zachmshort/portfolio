@@ -24,7 +24,7 @@ const codeSnippet2 = `if hashMap[i] > 1 {
 const post = {
   title: "Find All Numbers Disappeared in an Array",
   date: "2025-05-22T00:00:00Z",
-  tags: ["array", "hash table", "easy"],
+  tags: ["array", "hash table"],
   code: [
     `func findDisappearedNumbers(nums []int) []int {
     output := []int{}

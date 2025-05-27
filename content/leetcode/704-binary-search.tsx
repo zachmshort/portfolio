@@ -62,7 +62,7 @@ const pySolution = `class Solution:
 const post = {
   title: "Binary Search",
   date: "2025-04-08T00:00:00Z",
-  tags: ["array", "binary search", "easy"],
+  tags: ["array", "binary search"],
   code: [pySolution, goSolution, jsSolution],
   languages: ["Python", "Go", "Javascript"],
   children: <p>Do I really need to explain.</p>,

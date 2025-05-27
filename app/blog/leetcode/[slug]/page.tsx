@@ -38,7 +38,7 @@ export default async function LeetcodePostPage({ params }: Props) {
         <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
         <div className="text-sm text-gray-500">
           {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
-          {post.tags.join(", ")}
+          {post.tags.join(", ")} • {post?.difficulty ? post.difficulty : "easy"}
         </div>
         <div className={`mt-4`}>
           <em>{post?.quote && post.quote}</em>

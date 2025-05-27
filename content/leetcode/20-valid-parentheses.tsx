@@ -1,7 +1,7 @@
 const post = {
   title: "Valid Parenthesis",
   date: "2025-04-08T00:00:00Z",
-  tags: ["string", "stack", "easy"],
+  tags: ["string", "stack"],
   languages: ["Python"],
   code: `class Solution:
     def isValid(self, s: str) -> bool:

@@ -2,7 +2,7 @@ const post = {
   title: "Create Hello World Function",
   quote: `"An idiot admires complexity, a genius admires simplicity" - Terry A. Davis`,
   date: "2025-01-28T00:00:00Z",
-  tags: ["easy"],
+  tags: [],
   languages: ["JavaScript"],
   code: `var createHelloWorld = function () {
   return function (...args) {

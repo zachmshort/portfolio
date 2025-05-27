@@ -8,7 +8,6 @@ const post = {
     "binary search",
     "bit manipulation",
     "sorting",
-    "easy",
   ],
   code: [
     `func missingNumber(nums []int) int {

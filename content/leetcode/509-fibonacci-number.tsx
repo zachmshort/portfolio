@@ -17,7 +17,7 @@ const recursiveFib = `func fib(n int) int {
 const post = {
   title: "Fibonacci Number",
   date: "2025-05-23T00:00:00Z",
-  tags: ["math", "dynamic programming", "recursion", "memoization", "easy"],
+  tags: ["math", "dynamic programming", "recursion", "memoization"],
   code: [
     `func fib(n int) int {
   if n <= 1 {

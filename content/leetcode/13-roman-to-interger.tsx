@@ -1,7 +1,7 @@
 const post = {
   title: "Roman to Interger",
   date: "2025-04-28T00:00:00Z",
-  tags: ["hash-table", "math", "string", "easy"],
+  tags: ["hash-table", "math", "string"],
   languages: ["Go"],
   code: `func romanToInt(s string) int {
     numerals := map[string]int{"I":1, "V": 5, "X":10, "L":50, "C":100, "D":500, "M":1000}

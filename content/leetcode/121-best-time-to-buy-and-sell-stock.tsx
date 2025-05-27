@@ -18,7 +18,7 @@ const goSolution = `func maxProfit(prices []int) int {
 const post = {
   title: "Best Time to Buy and Sell Stock",
   date: "2025-03-03T00:00:00Z",
-  tags: ["array", "dynamic programming", "easy"],
+  tags: ["array", "dynamic programming"],
   code: [goSolution],
   languages: ["Go"],
   children: <p></p>,

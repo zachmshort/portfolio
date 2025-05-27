@@ -15,7 +15,7 @@ const goSolution = `func differenceOfSums(n int, m int) int {
 const post = {
   title: "Divisible and Non-divisible Sums Difference",
   date: "2025-05-27T00:00:00Z",
-  tags: ["math", "easy"],
+  tags: ["math"],
   code: [goSolution],
   languages: ["Go"],
   children: <p></p>,
