@@ -13,7 +13,11 @@ const post = {
   spaceBeats: [``],
   completed: ``,
   testsPassed: ``,
-  children: <p></p>,
+  children: (
+    <div className="prose prose-lg indent-6">
+      <p></p>
+    </div>
+  ),
 };
 
 export default post;
