@@ -12,12 +12,15 @@ export default async function LeetcodeIndexPage() {
         {posts.map((post) => (
           <li key={post.slug}>
             <Link href={`/blog/leetcode/${post.slug}`}>
-              <div className="text-xl font-semibold text-white-600 hover:underline">
+              <div
+                className={`text-xl font-semibold text-white-600 hover:underline ${post?.testsPassed && "text-red-200"}`}
+              >
                 {post.id}. {post.title}
               </div>
               <div className="text-sm text-gray-500">
                 {format(post.date, "MMMM dd, yyy")} •{" "}
-                {post.languages.join(", ")} • {post.tags.join(", ")}
+                {post.languages.join(", ")} • {post.difficulty}
+                {post?.testsPassed && ` • ${post.testsPassed}`}
               </div>
             </Link>
           </li>

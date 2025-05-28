@@ -1,3 +1,5 @@
+import { StrLLVisual } from "@/app/blog/components/string-ll-visual";
+
 const goSolution = `func reverseList(head *ListNode) *ListNode {
 	var prev *ListNode 
 	curr := head
@@ -32,9 +34,7 @@ const post = {
         pointers.
       </p>
       <p className={`mt-3`}>Ex: </p>
-      <p className={`mt-3`}>
-        1 -{">"} 2 -{">"} 3
-      </p>
+      <p className={`mt-3`}>{StrLLVisual([1, 2, 3])}</p>
       <ul className={`my-3`}>
         <li>Prev: null</li>
         <li>Curr: 1</li>
@@ -56,9 +56,7 @@ const post = {
       <p className={`mt-3`}> 1 &lt;- 2 &lt;- 3</p>
       <p>or</p>
 
-      <p>
-        3 -{">"} 2 -{">"} 1
-      </p>
+      <p>{StrLLVisual([3, 2, 1])}</p>
     </>
   ),
 };

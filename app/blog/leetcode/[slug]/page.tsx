@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import { Solution } from "@/components/code-snippet";
+import Link from "next/link";
 
 interface Props {
   params: Promise<{
@@ -62,3 +63,18 @@ export default async function LeetcodePostPage({ params }: Props) {
     notFound();
   }
 }
+const OtherProblemLink = ({
+  name,
+  number,
+  href,
+}: {
+  name: string;
+  number: number;
+  href: string;
+}) => {
+  return (
+    <Link href={href} className={`text-blue-500`}>
+      {name} ({number})
+    </Link>
+  );
+};

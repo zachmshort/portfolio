@@ -14,6 +14,8 @@ export async function getLeetcodePosts() {
       return {
         id,
         slug,
+        testsPassed: post?.testsPassed,
+        difficulty: post?.difficulty || "easy",
         languages: post.languages,
         title: post.title,
         date: new Date(post.date),

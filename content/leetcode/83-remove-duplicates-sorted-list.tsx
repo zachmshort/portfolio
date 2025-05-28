@@ -1,16 +1,17 @@
+const goSolution = ``;
 const post = {
-  title: ``,
+  title: `Remove Duplicates from a Sorted List`,
   tags: [``],
-  code: [``],
+  code: [goSolution],
   date: `2025-05-28T00:00:00Z`,
   difficulty: `easy`,
-  languages: [``],
+  languages: [`Go`],
   timeComplexity: [``],
   spaceComplexity: [``],
   timeBeats: [``],
   spaceBeats: [``],
-  completed: ``,
-  testsPassed: ``,
+  completed: true,
+  testsPassed: "",
   children: <p></p>,
 };
 

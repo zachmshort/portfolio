@@ -1,5 +1,5 @@
+import ProblemLink from "@/app/blog/components/problem-link";
 import { CodeSnippet } from "@/components/code-snippet";
-import Link from "next/link";
 
 const recursiveFib = `func fib(n int) int {
     if n <= 1 {
@@ -65,14 +65,8 @@ if n <= 4 {
 }
 `}
         />
-        I did this problem following{" "}
-        <Link
-          href="/blog/leetcode/70-climbing-stairs"
-          className={`text-blue-500`}
-        >
-          Climbing Stairs (70)
-        </Link>
-        , which involves a very similar approach. So the pattern of adding up to
+        I did this problem following <ProblemLink name="70-climbing-stairs" />,
+        which involves a very similar approach. So the pattern of adding up to
         the final value rather than breaking down in recursively was very
         straight forward. I initialized the index at 5, because thats the lowest
         value not covered by the base case. And then I thought about what value
