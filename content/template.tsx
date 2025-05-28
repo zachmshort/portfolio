@@ -1,10 +1,12 @@
+const goSolution = ``;
+
 const post = {
   title: ``,
   tags: [``],
-  code: [``],
-  date: `2025-05-28T00:00:00Z`,
+  code: [goSolution],
+  date: `2025-05-28T12:00:00Z`,
   difficulty: `easy`,
-  languages: [``],
+  languages: [`Go`],
   timeComplexity: [``],
   spaceComplexity: [``],
   timeBeats: [``],

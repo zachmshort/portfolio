@@ -1,6 +1,6 @@
 const post = {
   title: "Longest Common Prefix",
-  date: "2025-01-28T00:00:00Z",
+  date: "2025-01-28T12:00:00Z",
   tags: ["string", "trie"],
   languages: ["Go"],
   code: `func longestCommonPrefix(strs []string) string {

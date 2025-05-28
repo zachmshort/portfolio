@@ -81,7 +81,7 @@ const post = {
   title: `Add Two Numbers`,
   tags: [`linked list`, `math`, `recursion`],
   code: [goSolution],
-  date: `2025-05-28T00:00:00Z`,
+  date: `2025-05-27T12:00:00Z`,
   difficulty: `medium`,
   languages: [`Go`],
   completed: false,

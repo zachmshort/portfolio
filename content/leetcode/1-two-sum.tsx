@@ -1,6 +1,6 @@
 const post = {
   title: "Two Sum",
-  date: "2024-09-26T00:00:00Z",
+  date: "2024-09-26T12:00:00Z",
   tags: ["array", "hashmap"],
   languages: ["Go"],
   code: `func twoSum(nums []int, target int) []int {

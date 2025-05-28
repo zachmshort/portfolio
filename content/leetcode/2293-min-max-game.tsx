@@ -39,7 +39,7 @@ const post = {
   title: `Min Max Game`,
   tags: [`array`, `simulation`],
   code: [goSolution],
-  date: `2025-05-28T00:00:00Z`,
+  date: `2025-05-28T12:00:00Z`,
   difficulty: `easy`,
   languages: [`Go`],
   children: (
