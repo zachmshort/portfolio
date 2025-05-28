@@ -14,33 +14,29 @@ const goSolution = `func isHappy(n int) bool {
         seenNumbers[n] = true
 		n = getSum(n)
 	}
-
-    return isHappy(n)
 }
 
 func getSum(n int) int {
-	newN := 0
-	power := 0
+	a := 0
 	for n > 0 {
-		digit := float64((n % 10)) * math.Pow(10.0, float64(power))
+		digit := n % 10 
 		n /= 10
-
-		newN += int(digit*digit)
+		a += digit*digit
 	}
-    return newN
+
+    return a
 }
 `;
 
 const goSnippet = `func getSum(n int) int {
-	newN := 0
-	power := 0
+	a := 0
 	for n > 0 {
-		digit := float64((n % 10)) * math.Pow(10.0, float64(power))
+		digit := n % 10 
 		n /= 10
-
-		newN += int(digit*digit)
+		a += digit*digit
 	}
-    return newN
+
+    return a
 }
 `;
 
@@ -65,7 +61,7 @@ const post = {
         bit confused as to why it says there is a two pointer approach. Given my
         interpretation, I think that the easiest implementation would be a
         recursive solution with just math and a table. I am once again reminded
-        of <ProblemLink name="9-palindrome-nmber" />. My plan is to take each
+        of <ProblemLink name="9-palindrome-number" />. My plan is to take each
         digit and square it using modulo and div, and then recursively calling
         isHappy() we reach 1. This helper function gets the digits from n.
       </p>
