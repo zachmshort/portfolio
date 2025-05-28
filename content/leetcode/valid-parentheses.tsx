@@ -1,5 +1,5 @@
 const post = {
-  title: "Valid Parenthesis",
+  num: 20,
   date: "2025-04-08T00:00:00Z",
   tags: ["string", "stack"],
   languages: ["Python"],

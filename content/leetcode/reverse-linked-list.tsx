@@ -16,7 +16,7 @@ const goSolution = `func reverseList(head *ListNode) *ListNode {
 `;
 
 const post = {
-  title: "Reverse Linked List",
+  num: 206,
   date: "2025-05-24T12:00:00Z",
   tags: ["linked list"],
   code: [goSolution],

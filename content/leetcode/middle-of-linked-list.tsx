@@ -18,7 +18,7 @@ const goSolution = `func middleNode(head *ListNode) *ListNode {
 }`;
 
 const post = {
-  title: "Middle of Linked List",
+  num: 876,
   date: "2025-05-24T00:00:00Z",
   tags: ["linked list", "two pointers"],
   code: [goSolution],

@@ -78,7 +78,7 @@ const goSnippet1 = `func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 `;
 
 const post = {
-  title: `Add Two Numbers`,
+  num: 2,
   tags: [`linked list`, `math`, `recursion`],
   code: [goSolution],
   date: `2025-05-27T12:00:00Z`,

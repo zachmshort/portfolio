@@ -36,7 +36,7 @@ func max(num1, num2 int) int {
 `;
 
 const post = {
-  title: `Min Max Game`,
+  num: 2293,
   tags: [`array`, `simulation`],
   code: [goSolution],
   date: `2025-05-28T12:00:00Z`,

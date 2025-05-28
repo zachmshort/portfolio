@@ -9,7 +9,7 @@ const pySolution = `class Solution:
         return len(s[start+1:])`;
 
 const post = {
-  title: "Length of Last Word",
+  num: 58,
   date: "2025-04-08T00:00:00Z",
   tags: ["string"],
   code: [pySolution],

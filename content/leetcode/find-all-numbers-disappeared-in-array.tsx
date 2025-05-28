@@ -22,7 +22,7 @@ const codeSnippet2 = `if hashMap[i] > 1 {
 `;
 
 const post = {
-  title: "Find All Numbers Disappeared in an Array",
+  num: 448,
   date: "2025-05-22T00:00:00Z",
   tags: ["array", "hash table"],
   code: [

@@ -60,7 +60,7 @@ const pySolution = `class Solution:
 `;
 
 const post = {
-  title: "Binary Search",
+  num: 704,
   date: "2025-04-08T00:00:00Z",
   tags: ["array", "binary search"],
   code: [pySolution, goSolution, jsSolution],

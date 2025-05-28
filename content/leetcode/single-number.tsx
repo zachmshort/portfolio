@@ -1,5 +1,5 @@
 const post = {
-  title: "Single Number",
+  num: 136,
   date: "2025-05-23T00:00:00Z",
   tags: ["array", "bit manipulation", "easy"],
   code: [

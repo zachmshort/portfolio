@@ -14,7 +14,8 @@ const goSolution = `func addDigits(num int) int {
 `;
 
 const post = {
-  title: `Add Digits`,
+  title: "Add Digits",
+  num: 258,
   tags: [`math`, `simulation`, `number theory`],
   code: [goSolution],
   date: `2025-05-28T12:00:00Z`,

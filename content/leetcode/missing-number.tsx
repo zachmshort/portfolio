@@ -1,5 +1,5 @@
 const post = {
-  title: "Missing Number",
+  num: 268,
   date: "2025-05-22T00:00:00Z",
   tags: [
     "array",

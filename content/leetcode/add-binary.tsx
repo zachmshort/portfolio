@@ -11,6 +11,7 @@ const goSolution = `func addBinary(a string, b string) string {
 
 const post = {
   title: "Add Binary",
+  num: 67,
   date: "2025-01-29T00:00:00Z",
   tags: ["math", "string", "bit manipulation", "simulation"],
   code: [goSolution],

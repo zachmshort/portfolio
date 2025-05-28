@@ -48,7 +48,7 @@ const goSnippet2 = `if seenNumbers[n] {
 `;
 
 const post = {
-  title: `Happy Number`,
+  num: 202,
   tags: [`hash table`, `math`, `two pointers`],
   code: [goSolution],
   date: `2025-05-28T12:00:00Z`,

@@ -12,7 +12,7 @@ const goSolution = `func containsDuplicate(nums []int) bool {
 `;
 
 const post = {
-  title: "Contains Duplicate",
+  num: 2117,
   date: "2025-03-03T00:00:00Z",
   tags: ["array", "hash table", "sorting"],
   code: [goSolution],

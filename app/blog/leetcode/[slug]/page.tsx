@@ -1,9 +1,8 @@
-import { getLeetcodePosts } from "@/utils/get-leetcode-posts";
+import { formatSlug, getLeetcodePosts } from "@/utils/get-leetcode-posts";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import { Solution } from "@/components/code-snippet";
-import Link from "next/link";
 
 interface Props {
   params: Promise<{
@@ -18,13 +17,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const formattedSlug = slug
-    .replace("-", ". ")
-    .replaceAll("-", " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
 
   return {
-    title: `${formattedSlug}`,
+    title: `${formatSlug(slug)}`,
   };
 }
 
@@ -39,42 +34,32 @@ export default async function LeetcodePostPage({ params }: Props) {
         <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
         <div className="text-sm text-gray-500">
           {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
-          {post.tags.join(", ")} • {post?.difficulty ? post.difficulty : "easy"}
+          {post.tags.join(", ")} • {post.difficulty}
         </div>
         <div className={`mt-4`}>
           <em>{post?.quote && post.quote}</em>
         </div>
-        {post.code && post.languages && Array.isArray(post.code) ? (
-          post.code.map((code: string, index: number) => (
-            <div key={index} className="mt-6">
-              <div className="text-xs mb-1 text-zinc-400">
-                {post.languages[index]} Solution
-              </div>
-              <Solution code={code} />
+        <div className="prose my-6">{post.children}</div>
+        {post.code.map((code: string, index: number) => (
+          <div key={index} className="mt-6">
+            <div className="text-xs mb-1 text-zinc-400">
+              {post.languages[index]} Solution
             </div>
-          ))
-        ) : (
-          <Solution code={post.code} />
-        )}
-        <div className="prose mt-6">{post.children}</div>
+            <Solution code={code} />
+          </div>
+        ))}
+        <div className={`h-10`} />
+        <a
+          href={`https://leetcode.com/problems/${slug}/description`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-blue-500 underline mb-10`}
+        >
+          LeetCode Problem Link
+        </a>
       </div>
     );
   } catch (err) {
     notFound();
   }
 }
-const OtherProblemLink = ({
-  name,
-  number,
-  href,
-}: {
-  name: string;
-  number: number;
-  href: string;
-}) => {
-  return (
-    <Link href={href} className={`text-blue-500`}>
-      {name} ({number})
-    </Link>
-  );
-};

@@ -15,7 +15,7 @@ export default async function LeetcodeIndexPage() {
               <div
                 className={`text-xl font-semibold text-white-600 hover:underline ${post?.testsPassed && "text-red-200"}`}
               >
-                {post.id}. {post.title}
+                {post.num}. {post.title}
               </div>
               <div className="text-sm text-gray-500">
                 {format(post.date, "MMMM dd, yyy")} •{" "}

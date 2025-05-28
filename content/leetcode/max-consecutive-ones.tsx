@@ -50,7 +50,7 @@ func max(a []int) int {
 `;
 
 const post = {
-  title: `Max Consecutive Ones`,
+  num: 485,
   tags: [`array`],
   code: [goSolution],
   date: `2025-05-28T12:00:00Z`,

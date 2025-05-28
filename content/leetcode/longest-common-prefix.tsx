@@ -1,9 +1,10 @@
 const post = {
-  title: "Longest Common Prefix",
+  num: 14,
   date: "2025-01-28T12:00:00Z",
   tags: ["string", "trie"],
   languages: ["Go"],
-  code: `func longestCommonPrefix(strs []string) string {
+  code: [
+    `func longestCommonPrefix(strs []string) string {
     var result string
     shortestWord := strs[0]
 
@@ -30,6 +31,7 @@ const post = {
     return result
 }
 `,
+  ],
   children: <p></p>,
 };
 
