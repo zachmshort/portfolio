@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import { Complexity, Performance, Solution } from "@/components/slug-helpers";
-import { ReactNode } from "react";
 import BackArrowIcon from "@/components/back-arrow-svg";
 
 interface Props {
@@ -83,7 +82,7 @@ const Header = ({ post, slug }: { post: any; slug: string }) => {
   return (
     <>
       <h1 className="text-3xl font-bold">{formatSlug(slug)}</h1>
-      <div className="text-sm text-gray-500">
+      <div className="text-sm text-gray-400 font-normal">
         {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
         {post.tags.join(", ")} • {post.difficulty}
       </div>

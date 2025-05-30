@@ -53,13 +53,7 @@ func createNode(val int) *TreeNode {
 const post = {
   num: 108,
   date: `2025-05-29T12:00:00Z`,
-  tags: [
-    "array",
-    "divide and conquer",
-    "tree",
-    "binary search tree",
-    "binary tree",
-  ],
+  tags: ["array", "divide and conquer", "binary tree"],
   difficulty: `easy`,
   languages: [`Go`],
   complexity: {
@@ -92,13 +86,12 @@ const post = {
         ]}
       />
 
-      <EdgeCases items={[`Input: [] -> nil`]} />
+      <EdgeCases items={[`Input: [] -> null`]} />
 
       <Reflections
         items={[
           `I am honestly quite proud of myself for thinking of this solution without any outside help. I do not believe that this is an easy problem.`,
           `After looking at other peoples solutions, I recognize that the helper insert function is not explicity necessary. However, when I used other peoples solutions where they just recursively called the primary function, their solutions ended up all being far less optimal as far as memory is concerned, as in orders of magnitude worst (25% vs 75%). `,
-
           `I also now know that you do not have to initialize all of the values in a struct in a Go, I just always assumed that because it is a strongly typed language that you have to intialize left and right as nil on a tree node for example but you dont.`,
         ]}
       />
