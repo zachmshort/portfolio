@@ -1,9 +1,4 @@
-import {
-  Approach,
-  EdgeCases,
-  Problem,
-  Reflections,
-} from "@/components/slug-helpers";
+import { Problem } from "@/components/slug-helpers";
 
 const goSolution = `func removeDuplicates(nums[]int) int {
   hashMap:= make(map[int]bool)
