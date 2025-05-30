@@ -36,8 +36,8 @@ export default async function LeetcodePostPage({ params }: Props) {
         <BackArrowIcon />
         <Header post={post} slug={slug} />
         <Quote quote={post?.quote} />
-        <PerformanceComplexity post={post} />
         <Content>{post.children}</Content>
+        <PerformanceComplexity post={post} />
         <Code post={post} />
         <LeetCodeProblemLink slug={slug} />
       </div>
