@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
 import { Complexity, Performance, Solution } from "@/components/slug-helpers";
-import BackArrowIcon from "@/components/back-arrow-svg";
+import BackArrowIcon from "@/components/back-arrow-button";
 
 interface Props {
   params: Promise<{
