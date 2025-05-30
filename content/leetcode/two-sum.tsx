@@ -3,7 +3,8 @@ const post = {
   date: "2024-09-26T12:00:00Z",
   tags: ["array", "hashmap"],
   languages: ["Go"],
-  code: `func twoSum(nums []int, target int) []int {
+  code: [
+    `func twoSum(nums []int, target int) []int {
 	hashMap := make(map[int]int)
 
 	for i, num := range nums {
@@ -19,6 +20,7 @@ const post = {
     return []int{-1,-1}
 }
 `,
+  ],
   children: (
     <p>
       This is one of the most common intro questions to test problem solving and

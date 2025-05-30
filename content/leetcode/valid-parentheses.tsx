@@ -3,7 +3,8 @@ const post = {
   date: "2025-04-08T00:00:00Z",
   tags: ["string", "stack"],
   languages: ["Python"],
-  code: `class Solution:
+  code: [
+    `class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
         open_brackets = ["[", "{", "("]
@@ -20,6 +21,7 @@ const post = {
                 return False  
         return len(stack) == 0
 `,
+  ],
   children: (
     <p>
       I completed this problem the same time that we were going over stacks in

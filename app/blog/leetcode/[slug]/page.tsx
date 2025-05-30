@@ -34,7 +34,7 @@ export default async function LeetcodePostPage({ params }: Props) {
     return (
       <div className="max-w-2xl mx-auto p-6 pt-40 lg:pt-6">
         <BackArrowIcon />
-        <Header post={post} />
+        <Header post={post} slug={slug} />
         <Quote quote={post?.quote} />
         <PerformanceComplexity post={post} />
         <Content>{post.children}</Content>
@@ -79,10 +79,10 @@ const Quote = ({ quote }: { quote?: string }) => {
   );
 };
 
-const Header = ({ post }: { post: any }) => {
+const Header = ({ post, slug }: { post: any; slug: string }) => {
   return (
     <>
-      <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+      <h1 className="text-3xl font-bold mb-2">{formatSlug(slug)}</h1>
       <div className="text-sm text-gray-500">
         {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
         {post.tags.join(", ")} • {post.difficulty}

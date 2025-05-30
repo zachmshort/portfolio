@@ -13,11 +13,9 @@ export async function getLeetcodePosts() {
     files.map(async (file) => {
       const slug = file.replace(/\.tsx$/, "");
       const post = (await import(`@/content/leetcode/${slug}`)).default;
-      const title = formatSlug(slug);
 
       return {
         slug,
-        title: title,
         num: post.num,
         testsPassed: post?.testsPassed,
         difficulty: post?.difficulty || "easy",

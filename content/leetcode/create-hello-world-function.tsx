@@ -4,12 +4,14 @@ const post = {
   date: "2025-01-28T00:00:00Z",
   tags: [],
   languages: ["JavaScript"],
-  code: `var createHelloWorld = function () {
+  code: [
+    `var createHelloWorld = function () {
   return function (...args) {
     return "Hello World";
   };
 };
 `,
+  ],
   children: (
     <>
       <p>
