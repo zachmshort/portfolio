@@ -4,7 +4,7 @@ const BackArrowIcon = () => {
   return (
     <Link
       href="/blog/leetcode"
-      className={`absolute lg:fixed border border-white rounded py-2 px-3 sm:left-6 sm:top-6 top-2 left-2 flex flex-row items-center gap-x-2`}
+      className={`lg:fixed border border-white rounded py-2 px-3 lg:left-6 lg:top-6 max-w-36 mb-4 flex flex-row items-center gap-x-2`}
     >
       <svg
         stroke="currentColor"
