@@ -60,12 +60,11 @@ const Complexity = ({
       <Title title="Complexity" />
       <ul>
         <li>
-          <strong>Time:</strong> <code>{time}</code>{" "}
-          {timeExplanation && ` - ` + timeExplanation}
+          <strong>Time:</strong> <code>{time}</code> {timeExplanation}
         </li>
         <li>
           <strong>Space:</strong> <code>{space}</code>
-          {spaceExplanation && ` - ` + spaceExplanation}
+          {spaceExplanation}
         </li>
       </ul>
     </>
