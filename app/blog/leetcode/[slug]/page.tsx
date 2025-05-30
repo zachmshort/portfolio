@@ -32,11 +32,11 @@ export default async function LeetcodePostPage({ params }: Props) {
     const post = (await import(`@/content/leetcode/${slug}`)).default;
 
     return (
-      <div className="max-w-2xl mx-auto p-6 pt-40 lg:pt-6">
+      <div className="max-w-2xl mx-auto p-6 pt-20 lg:pt-6">
         <BackArrowIcon />
         <Header post={post} slug={slug} />
         <Quote quote={post?.quote} />
-        <Content>{post.children}</Content>
+        {post.children}
         <PerformanceComplexity post={post} />
         <Code post={post} />
         <LeetCodeProblemLink slug={slug} />
@@ -82,7 +82,7 @@ const Quote = ({ quote }: { quote?: string }) => {
 const Header = ({ post, slug }: { post: any; slug: string }) => {
   return (
     <>
-      <h1 className="text-3xl font-bold mb-2">{formatSlug(slug)}</h1>
+      <h1 className="text-3xl font-bold">{formatSlug(slug)}</h1>
       <div className="text-sm text-gray-500">
         {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
         {post.tags.join(", ")} • {post.difficulty}
@@ -120,8 +120,4 @@ const LeetCodeProblemLink = ({ slug }: { slug: string }) => {
       </a>
     </>
   );
-};
-
-const Content = ({ children }: { children: ReactNode }) => {
-  return <div className="prose my-6">{children}</div>;
 };

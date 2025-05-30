@@ -92,7 +92,7 @@ const post = {
         ]}
       />
 
-      <EdgeCases items={[`Input: [] -> Output: nil`]} />
+      <EdgeCases items={[`Input: [] -> nil`]} />
 
       <Reflections
         items={[

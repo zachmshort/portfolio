@@ -32,8 +32,8 @@ const Solution = ({
 const Approach = ({ items }: { items: string[] }) => {
   return (
     <>
-      <h2 className={`text-2xl py-3`}>Approach</h2>
-      <ul className={`my-3`}>
+      <Title title="Approach" />
+      <ul className={``}>
         {items.map((item: string, index: number) => (
           <li key={index}>
             {index + 1}. {item}
@@ -57,7 +57,7 @@ const Complexity = ({
 }) => {
   return (
     <>
-      <h2 className={`text-2xl py-3`}>Complexity</h2>
+      <Title title="Complexity" />
       <ul>
         <li>
           <strong>Time:</strong> <code>{time}</code>{" "}
@@ -75,7 +75,7 @@ const Complexity = ({
 const Performance = ({ time, memory }: { time: number; memory: number }) => {
   return (
     <>
-      <h2 className={`text-2xl py-3`}>Performance</h2>
+      <Title title="Performance" />
       <ul>
         <li>
           <strong>Runtime beats:</strong> {time}%
@@ -91,8 +91,8 @@ const Performance = ({ time, memory }: { time: number; memory: number }) => {
 const EdgeCases = ({ items }: { items: string[] }) => {
   return (
     <>
-      <h2 className={`text-2xl py-3`}>Edge Cases</h2>
-      <ul className={`my-3`}>
+      <Title title="Edge Cases" />
+      <ul>
         {items.map((item: string, index: number) => (
           <li key={index}>{item}</li>
         ))}
@@ -104,7 +104,7 @@ const EdgeCases = ({ items }: { items: string[] }) => {
 const Reflections = ({ items }: { items: string[] }) => {
   return (
     <>
-      <h2 className={`text-2xl py-3 bold`}>Reflections</h2>
+      <Title title="Reflections" />
       {items.map((item: string, index: number) => (
         <p className={`indent-6`} key={index}>
           {item}
@@ -125,17 +125,21 @@ const Problem = ({
 }) => {
   return (
     <>
-      <h2 className={`text-2xl py-3`}>Problem</h2>
+      <Title title="Problem" />
       <ul>
         {items.map((item: string, index: number) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
-      {input && output && <p className={`text-lg pt-2`}>Example: </p>}
+      {input && output && <p className={`pt-2`}>Example: </p>}
       {input && <p>Input: {input}</p>}
       {output && <p>Output: {output}</p>}
     </>
   );
+};
+
+const Title = ({ title }: { title: string }) => {
+  return <h2 className={`text-2xl pt-5 pb-1 font-semibold`}>{title}</h2>;
 };
 
 export {
