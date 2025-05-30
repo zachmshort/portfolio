@@ -1,6 +1,6 @@
 import ProblemLink from "@/app/blog/components/problem-link";
 import { StrLLVisual } from "@/app/blog/components/string-ll-visual";
-import { CodeSnippet } from "@/components/code-snippet";
+import { CodeSnippet } from "@/components/slug-helpers";
 
 const goSolution = `func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	sum1, sum2 := getSumFromList(l1), getSumFromList(l2)

@@ -22,6 +22,8 @@ export async function getLeetcodePosts() {
         testsPassed: post?.testsPassed,
         difficulty: post?.difficulty || "easy",
         languages: post.languages,
+        performance: post?.performance,
+        complexity: post?.complexity,
         date: new Date(post.date),
         tags: post.tags,
       };

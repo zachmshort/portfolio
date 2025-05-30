@@ -1,5 +1,5 @@
 import ProblemLink from "@/app/blog/components/problem-link";
-import { CodeSnippet } from "@/components/code-snippet";
+import { CodeSnippet } from "@/components/slug-helpers";
 
 const recursiveFib = `func fib(n int) int {
     if n <= 1 {

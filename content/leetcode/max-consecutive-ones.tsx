@@ -1,4 +1,4 @@
-import { CodeSnippet } from "@/components/code-snippet";
+import { CodeSnippet } from "@/components/slug-helpers";
 
 const goSolution = `func findMaxConsecutiveOnes(nums[]int) int {
   highestCount, count := 0, 0
