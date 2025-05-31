@@ -1,39 +1,39 @@
 import { Approach, Problem, Reflections } from "@/components/slug-helpers";
 
-const goSolution = `func minSubArrayLen(target int, nums[]int) int {
-  left, right := 0, 0
-  n:= len(nums)
-  candidate:= 0
-  sum:= 0
+const goSolution = `func minSubArrayLen(target int, nums []int) int {
+    left, right := 0,0
+    n := len(nums)
+    candidate := 0
+    sum := 0
 
-  for right <= n {
-    window:= nums[left: right]
+    for right <= n {
+        window := nums[left:right]
 
-    if sum < target {
-      if right <= n - 1{
-    sum += nums[right]
-  }
-  right++
-} else if sum >= target {
-  candidate = getCandidate(candidate, len(window))
-  sum -= nums[left]
-  left++
-}
+        if sum < target {
+            if right <= n - 1{
+                sum += nums[right]
+            }
+            right++
+        } else if sum >= target {
+            candidate = getCandidate(candidate,len(window))
+            sum -= nums[left]
+            left++
+        }
     }
 
-return candidate
+    return candidate
 }
 
 func getCandidate(a, b int) int {
-  if a == 0 {
+    if a == 0 {
+        return b
+    }
+
+    if a < b {
+        return a
+    } 
+
     return b
-  }
-
-  if a < b {
-    return a
-  }
-
-  return b
 }
 `;
 

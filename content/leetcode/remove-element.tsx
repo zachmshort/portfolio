@@ -5,18 +5,21 @@ import {
   Reflections,
 } from "@/components/slug-helpers";
 
-const goSolution = `
-func removeElement(nums []int, val int) int {
-  counter := 0
-  for i := 0; i <= len(nums)-1-counter; i++ {
-    for nums[i] == val && i <= len(nums)-1-counter {
-      if i != len(nums)-1-counter {
-        nums[i], nums[len(nums)-1-counter] = nums[len(nums)-1-counter], nums[i]
+const goSolution = `func removeElement(nums []int, val int) int {
+  c := 0
+  for i := 0; i <= len(nums)-1-c; i++ {
+    for nums[i] == val && i <= lch(nums,c) {
+      if i != lch(nums, c) {
+        nums[i], nums[lch(nums, c)] = nums[lch(nums, c)], nums[i]
       }
-      counter++
+      c++
     }
   }
-  return len(nums) - counter
+  return lch(nums, c) + 1
+}
+
+func lch(n []int, c int) int {
+  return len(n) - 1 - c
 }
 `;
 
