@@ -26,8 +26,7 @@ const post = {
   complexity: {
     time: "O(n²)",
     space: "O(1)",
-    timeExplanation: `In the worst case (e.g., many zeros at the start), each zero may scan almost the whole array to find a swap target, making the nested traversal O(n²).`,
-    spaceExplanation: `Only a constant amount of space is used for the two pointers.`,
+    timeExplanation: `Double nested for loop.`,
   },
   performance: { time: 19, memory: 97 },
 
