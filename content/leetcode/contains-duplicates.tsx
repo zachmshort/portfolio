@@ -1,11 +1,12 @@
 const goSolution = `func containsDuplicate(nums []int) bool {
-    hashMap := make(map[int]bool)
+    m := make(map[int]bool)
 
-    for _,num := range nums {
-        if _, exists := hashMap[num]; exists {
+    for _, num := range nums {
+        if _,k := m[num]; k {
             return true
         }
-        hashMap[num] = true
+
+        m[num] = true
     }
     return false
 }
