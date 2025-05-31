@@ -1,20 +1,14 @@
-import {
-  Approach,
-  EdgeCases,
-  Problem,
-  Reflections,
-} from "@/components/slug-helpers";
+import { Problem } from "@/components/slug-helpers";
 
-const goSolution = `import "fmt"
-func strStr(haystack string, needle string) int {
+const goSolution = `func strStr(haystack string, needle string) int {
   i:= 0
   for len(needle) <= len(haystack) - i {
     if needle == haystack[i: i+ len(needle)] {
-    return i
+      return i
+    }
+    i++
   }
-  i++
-}
-return -1  
+  return -1  
 }
 
 `;

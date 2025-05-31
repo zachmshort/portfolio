@@ -75,11 +75,10 @@ const post = {
       </div>
       <div className={`flex flex-col items-center justify-center gap-y-4 mt-4`}>
         <div className="relative w-full">
-          <Image src={image} alt="Exponentiation" width={800} />
-        </div>
-
-        <div className="relative w-full">
           <Image src={image2} alt="Exponentiation" width={800} />
+        </div>
+        <div className="relative w-full">
+          <Image src={image} alt="Exponentiation" width={800} />
         </div>
       </div>
 

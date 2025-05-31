@@ -1,4 +1,4 @@
-import { getLeetcodePosts } from "@/utils/get-leetcode-posts";
+import { formatSlug, getLeetcodePosts } from "@/utils/get-leetcode-posts";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
@@ -21,9 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   try {
     const post = (await import(`@/content/leetcode/${slug}`)).default;
+    console.log(post, "post in /portfolio/app/blog/leetcode/[slug]/page.tsx");
 
     return {
-      title: post.title,
+      title: post?.title || formatSlug(slug),
       description: `Solution and explanation for LeetCode problem: ${post.title}`,
     };
   } catch (err) {
@@ -90,7 +91,7 @@ const Quote = ({ quote }: { quote?: string }) => {
 const Header = ({ post, slug }: { post: any; slug: string }) => {
   return (
     <>
-      <h1 className="text-3xl font-bold">{post.title}</h1>
+      <h1 className="text-3xl font-bold">{post?.title || formatSlug(slug)}</h1>
       <div className="text-sm text-gray-400 font-normal">
         {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
         {post.tags.join(", ")} • {post.difficulty}
