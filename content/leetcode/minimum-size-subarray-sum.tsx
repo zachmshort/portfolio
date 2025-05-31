@@ -1,9 +1,4 @@
-import {
-  Approach,
-  EdgeCases,
-  Problem,
-  Reflections,
-} from "@/components/slug-helpers";
+import { Approach, Problem, Reflections } from "@/components/slug-helpers";
 
 const goSolution = `func minSubArrayLen(target int, nums[]int) int {
   left, right := 0, 0
@@ -67,17 +62,17 @@ const post = {
 
       <Approach
         items={[
-          `Use the sliding window (two pointer) technique.`,
-          `Start with both pointers at the beginning of the array. Expand the window by moving the right pointer while the sum is less than the target.`,
-          `Once the sum becomes ≥ target, attempt to shrink the window by moving the left pointer to find a smaller valid subarray.`,
-          `Track the minimal length of all valid windows.`,
-          `Repeat until the right pointer reaches the end of the array.`,
-          `This approach ensures the entire array is only scanned once, giving linear time complexity.`,
-          `Example trace (target = 7, nums = [2,3,4,1,2,4,3]):
-     - window grows: [2], [2,3], [2,3,1], [2,3,1,2]
-     - window meets/exceeds target: [2,3,1,2] → try to shrink
-     - shrink and re-expand as needed
-     - find shorter valid subarrays like [1,2,4] and [4,3]`,
+          `Create sliding window starting at [0,0]`,
+          `Expand the window by moving the right pointer while the sum is less than the target`,
+          `Once the sum becomes ≥ target, attempt to shrink the window by moving the left pointer to find a smaller valid subarray`,
+          `Track the minimal length of all valid windows`,
+          `Repeat until the right pointer reaches the end of the array`,
+          `This approach ensures the entire array is only scanned once, giving linear time complexity`,
+          `Example: (target = 7, nums = [2,3,4,1,2,4,3]):`,
+          `- window grows: [2], [2,3], [2,3,1], [2,3,1,2]`,
+          `- window meets/exceeds target: [2,3,1,2] → try to shrink`,
+          `- shrink and re-expand as needed`,
+          `- find shorter valid subarrays like [1,2,4] and [4,3]`,
         ]}
       />
       <Reflections
