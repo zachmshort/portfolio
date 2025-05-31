@@ -81,7 +81,7 @@ const Quote = ({ quote }: { quote?: string }) => {
 const Header = ({ post, slug }: { post: any; slug: string }) => {
   return (
     <>
-      <h1 className="text-3xl font-bold">{formatSlug(slug)}</h1>
+      <h1 className="text-3xl font-bold">{post.title}</h1>
       <div className="text-sm text-gray-400 font-normal">
         {format(post.date, "MMMM dd, yyyy")} • {post.languages.join(", ")} •{" "}
         {post.tags.join(", ")} • {post.difficulty}

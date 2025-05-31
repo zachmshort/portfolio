@@ -20,6 +20,7 @@ const goSolution = `func postorder(root *Node) []int {
 
 const post = {
   num: 590,
+  title: "N-ary Tree Postorder Traversal",
   date: `2025-05-30T12:00:00Z`,
   tags: ["stack", "tree", "depth first search"],
   difficulty: `easy`,

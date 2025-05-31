@@ -6,10 +6,9 @@ import {
 } from "@/components/slug-helpers";
 
 const goSolution = `func threeSum(nums []int) [][]int {
-	var res [][]int
-	tripletSets := make(map[string]bool)
-	sort.Ints(nums)
 	set := toSet(nums)
+	tripletSets := make(map[string]bool)
+
 	for num := range set {
 		if num == 0 && len(set) == 1 && len(nums) >= 3 {
 			res = append(res, []int{num, num, num})
@@ -17,6 +16,10 @@ const goSolution = `func threeSum(nums []int) [][]int {
 		}
 		break
 	}
+
+	var res [][]int
+	sort.Ints(nums)
+
 
 	hash := make(map[int][]int)
 	for i, num := range nums {
@@ -67,6 +70,7 @@ func toSet(nums []int) map[int]struct{} {
 
 const post = {
   num: 15,
+  title: "3Sum",
   date: `2025-05-30T12:00:00Z`,
   tags: ["brute force", "hashmap"],
   difficulty: `medium`,

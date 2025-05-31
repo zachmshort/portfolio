@@ -17,6 +17,7 @@ export async function getLeetcodePosts() {
       return {
         slug,
         num: post.num,
+        title: post?.title || formatSlug(slug),
         testsPassed: post?.testsPassed,
         difficulty: post?.difficulty || "easy",
         languages: post.languages,

@@ -1,4 +1,4 @@
-import { formatSlug, getLeetcodePosts } from "@/utils/get-leetcode-posts";
+import { getLeetcodePosts } from "@/utils/get-leetcode-posts";
 import { format } from "date-fns";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ export default async function LeetcodeIndexPage() {
               <div
                 className={`text-xl font-semibold text-white-600 hover:underline ${post?.testsPassed && "text-red-200"}`}
               >
-                {post.num}. {formatSlug(post.slug)}
+                {post.num}. {post.title}
               </div>
               <div className="text-sm text-gray-500">
                 {format(post.date, "MMMM dd, yyy")} •{" "}

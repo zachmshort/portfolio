@@ -21,6 +21,7 @@ const goSolution = `func preorder(root * Node)[]int {
 
 const post = {
   num: 589,
+  title: "N-ary Tree Preorder Traversal",
   date: `2025-05-30T12:00:00Z`,
   tags: ["stack", "tree", "depth first search"],
   difficulty: `easy`,
