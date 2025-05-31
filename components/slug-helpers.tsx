@@ -142,6 +142,7 @@ const Title = ({ title }: { title: string }) => {
 };
 
 export {
+  Title,
   CodeSnippet,
   Solution,
   Approach,

@@ -1,4 +1,4 @@
-import { formatSlug, getLeetcodePosts } from "@/utils/get-leetcode-posts";
+import { getLeetcodePosts } from "@/utils/get-leetcode-posts";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { Metadata } from "next";
@@ -19,9 +19,18 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
 
-  return {
-    title: `${formatSlug(slug)}`,
-  };
+  try {
+    const post = (await import(`@/content/leetcode/${slug}`)).default;
+
+    return {
+      title: post.title,
+      description: `Solution and explanation for LeetCode problem: ${post.title}`,
+    };
+  } catch (err) {
+    return {
+      title: "Post not found",
+    };
+  }
 }
 
 export default async function LeetcodePostPage({ params }: Props) {

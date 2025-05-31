@@ -1,6 +1,12 @@
 import { getLeetcodePosts } from "@/utils/get-leetcode-posts";
 import { format } from "date-fns";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "LeetCode Solutions | Zachary Short",
+  description: "Table of Contents for all of my logged leetcode solutions",
+};
 
 export default async function LeetcodeIndexPage() {
   const posts = await getLeetcodePosts();
