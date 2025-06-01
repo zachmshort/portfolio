@@ -58,7 +58,7 @@ func insertVal(head *TreeNode, description []int) *TreeNode {
 const post = {
   num: 2196,
   date: `2025-05-30T12:00:00Z`,
-  tags: [`array`, `hashTable`, `tree`, `binary tree`],
+  tags: [`array`, `hash table`, `tree`, `binary tree`],
   difficulty: `medium`,
   languages: [`Go`],
   code: [goSolution],
