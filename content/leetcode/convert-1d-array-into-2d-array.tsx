@@ -21,7 +21,8 @@ const goSolution = `func construct2DArray(original []int, m int, n int) [][]int 
 
 const post = {
   num: 2022,
-  date: `2025-05-29T12:00:00Z`,
+  title: "Convert 1D Array Into 2D Array",
+  date: `2025-05-31T12:00:00Z`,
   tags: ["array", "matrix", "simulation"],
   difficulty: `easy`,
   languages: [`Go`],

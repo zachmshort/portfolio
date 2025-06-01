@@ -19,7 +19,7 @@ const goSolution = `func moveZeroes(nums []int)  {
 `;
 const post = {
   num: 283,
-  date: `2025-05-30T12:00:00Z`,
+  date: `2025-05-31T12:00:00Z`,
   tags: ["array", "two pointers", "in-place"],
   difficulty: `easy`,
   languages: ["Go"],
