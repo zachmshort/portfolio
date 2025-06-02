@@ -8,7 +8,8 @@ const ibm = IBM_Plex_Mono({
 });
 export const metadata = {
   title: "Zachary Short",
-  description: "",
+  description:
+    "Hi, my name is Zachary Short. This is my programming portfolio as well as my LeetCode and Economics blog page.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
