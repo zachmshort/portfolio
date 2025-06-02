@@ -21,6 +21,7 @@ const goSolution = `func isAcronym(words []string, s string) bool {
 
 const post = {
   num: 2828,
+  title: "Check if a String Is an Acronym of Words",
   date: `2025-06-02T12:00:00Z`,
   tags: ["array", "string"],
   difficulty: `easy`,
